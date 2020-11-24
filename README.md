@@ -1,4 +1,4 @@
-<h1 align="center">Projeto sobre Covid19 - Tópicos Avançados em Tecnologia utilizando Design Patterns 👋</h1>
+<h1 align="center">Complete React Developer in 2020 (w Redux, Hooks, GraphQL)👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
@@ -6,13 +6,11 @@
   </a>
 </p>
 
-> Gerador de gráficos sobre casos de Covid19 no mundo utilizando o React.js, Spring boot e Apex.js
+> Complete React Developer in 2020 (w Redux, Hooks, GraphQL)
 
 ### 🏠 [Homepage](https://www.covid19.herokuapp.com)
 
 ### ✨ [Demo](https://www.covid19.herokuapp.com)
-
-<img src="https://j.gifs.com/k8Ep9K.gif">
 
 ## Install
 

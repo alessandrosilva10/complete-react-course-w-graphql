@@ -1,22 +1,14 @@
 import './App.css';
 import React from 'react';
 import { CardList } from './components/card-list/card-list.component';
+import { SearchBox } from './components/search-box/search-box.component';
 
 class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      monsters: [
-        {
-          name: 'Frankstein'
-        },
-        {
-          name: 'Dracula'
-        },
-        {
-          name: 'Zombie'
-        }
-      ]
+      monsters: [],
+      searchField: ''
     }
   }
 
@@ -24,14 +16,19 @@ class App extends React.Component{
     fetch("https://jsonplaceholder.typicode.com/users")
       .then(res => res.json())
       .then(res => this.setState({monsters: res}));
-
   }
-  //Assistir aula 17
+  
   render(){
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()));
     return (
       <>
       <div className="App">
-      <CardList monsters={this.state.monsters}/>
+        <SearchBox
+          placeholder="Search monsters"
+          onChange={e => this.setState({searchField: e.target.value})}
+        />
+      <CardList monsters={filteredMonsters}/>
       </div>  
       </>
     );
